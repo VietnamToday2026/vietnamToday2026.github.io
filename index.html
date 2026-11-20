@@ -1,156 +1,310 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#073b3a">
-<meta name="description" content="VIETNAM TODAY — экскурсии в Нячанге и по всему Вьетнаму. Подбор туров и помощь с обменом валюты.">
-<title>VIETNAM TODAY — экскурсии во Вьетнаме</title>
+<meta name="theme-color" content="#103c35">
+<meta name="description" content="VIETNAM TODAY — экскурсии из Нячанга по Вьетнаму. Подберём маршрут, поможем организовать отдых. Бронирование в WhatsApp.">
+<title>VIETNAM TODAY — открой свой Вьетнам</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--green:#07534b;--dark:#073b3a;--mint:#dff3e9;--sand:#f6f7f2;--ink:#173331;--muted:#687976;--line:#e3ebe5;--orange:#f2a65a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-.top{background:var(--dark);color:#e3f3ec;font-size:13px;padding:8px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px}
-header{position:sticky;top:0;z-index:10;background:#ffffffef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-weight:900;letter-spacing:1px;color:var(--dark);font-size:18px}.logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted)}.links{display:flex;gap:24px;font-size:14px;font-weight:bold}.links a:hover{color:#16816e}.menu{display:none;border:0;background:none;font-size:27px;color:var(--dark)}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:13px 20px;background:var(--green);color:white;font-weight:bold;cursor:pointer}.btn:hover{background:#0b7568}.btn.white{background:white;color:var(--dark)}.btn.small{padding:10px 14px;font-size:13px}
-.hero{color:white;min-height:550px;display:flex;align-items:center;background:linear-gradient(90deg,#042b2be8,#042b2b88 58%,#042b2b22),url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2000&q=85') center/cover}
-.hero-content{padding:80px 0;max-width:700px}.eyebrow{color:#bce9d7;text-transform:uppercase;letter-spacing:3px;font-weight:bold;font-size:12px}.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.03;margin:18px 0}.hero h1 span{color:#a9e2c9}.hero p{font-size:18px;color:#e3eee9;max-width:570px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
-section{padding:76px 0}.soft{background:var(--sand)}.heading{margin-bottom:28px}.kicker{color:#16816e;text-transform:uppercase;letter-spacing:2px;font-weight:bold;font-size:11px}.heading h2{font-size:clamp(30px,4vw,44px);line-height:1.12;margin:8px 0}.heading p{color:var(--muted);max-width:650px;margin:8px 0}
-.deal{display:grid;grid-template-columns:1.2fr .8fr;border-radius:24px;overflow:hidden;background:var(--dark);color:white}.deal-copy{padding:38px}.deal-copy h2{font-size:38px;margin:15px 0}.deal-copy p{color:#d0e2db}.deal-price{font-size:52px;font-weight:900;color:#b6ebd0;margin:18px 0}.deal-art{min-height:280px;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85') center/cover}
-.toolbar{display:grid;gap:14px;margin:25px 0}.searchbox{position:relative}.searchbox:before{content:"⌕";position:absolute;left:16px;top:7px;font-size:25px;color:#71847d}.searchbox input{width:100%;padding:14px 18px 14px 44px;border:1px solid #d8e3dc;border-radius:30px;background:white;outline:none}.searchbox input:focus{border-color:#16816e;box-shadow:0 0 0 3px #16816e18}
-.filters{display:flex;gap:9px;flex-wrap:wrap}.filter{border:1px solid #d7e3dc;border-radius:30px;background:white;padding:10px 15px;color:#49615b;font-size:13px;font-weight:bold;cursor:pointer}.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:white}
-.catalog-status{font-size:13px;color:var(--muted);margin:0 0 15px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 16px #123b3010}.card-top{height:105px;background:linear-gradient(135deg,#dff3e9,#a9cdbd);display:flex;align-items:center;justify-content:center;font-size:52px}.card-body{padding:18px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#16816e;font-weight:bold}.card h3{font-size:18px;line-height:1.25;margin:7px 0}.card p{font-size:13px;color:var(--muted);margin:0 0 14px;min-height:40px}.prices{display:flex;gap:18px;border-top:1px solid #edf1ed;padding-top:12px;margin-top:auto}.price{font-size:12px;color:var(--muted)}.price b{display:block;color:var(--ink);font-size:19px}.card .btn{width:100%;margin-top:15px}.empty{display:none;padding:30px;text-align:center;border:1px dashed #b9cfc2;border-radius:16px;color:var(--muted)}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:25px;border:1px solid var(--line);border-radius:18px}.feature .ico{font-size:30px}.feature h3{margin:10px 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px}
-.currency{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:#e8f4ed;border-radius:24px;padding:34px}.currency p{color:#536d64}.currency-note{padding:24px;background:white;border-radius:16px;color:var(--muted)}
-.contact{padding:40px;border-radius:24px;background:linear-gradient(100deg,#073b3af2,#073b3a9c),url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact p{color:#d2e4dc}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
-footer{background:#062f2e;color:#d6e8e0;padding:42px 0 20px}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}.foot-title{font-weight:bold;color:white;margin-bottom:10px}.foot-links{display:grid;gap:8px}.foot-links a{color:#b3cbc1;font-size:14px}.copyright{border-top:1px solid #ffffff22;margin-top:30px;padding-top:18px;color:#91aaa0;font-size:12px}
-.modal{display:none;position:fixed;inset:0;background:#001d1bd9;z-index:30;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-box{background:white;border-radius:20px;padding:26px;width:min(480px,100%);max-height:92vh;overflow:auto;position:relative}.close{position:absolute;right:14px;top:12px;border:0;border-radius:50%;width:34px;height:34px;font-size:21px;cursor:pointer}.modal-box h2{margin:0 40px 6px 0}.modal-box p{color:var(--muted);font-size:14px}.field{margin:13px 0}.field label{display:block;font-size:12px;font-weight:bold;margin-bottom:5px}.field input,.field textarea{width:100%;padding:12px;border:1px solid #d8e3dc;border-radius:10px}.field textarea{min-height:75px}.modal-box form>.btn{width:100%}.float{position:fixed;right:18px;bottom:18px;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#1eae68;color:white;font-size:26px;z-index:15;box-shadow:0 7px 22px #0003}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.links{gap:12px;font-size:12px}.deal{grid-template-columns:1fr .7fr}}
-@media(max-width:650px){.wrap{width:calc(100% - 30px)}.top .wrap{justify-content:center;text-align:center}.top .wrap span{display:none}nav{min-height:64px}.menu{display:block}.links{display:none;position:absolute;top:64px;left:0;right:0;background:white;padding:18px 24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.links a{font-size:15px}.nav-cta{display:none}.hero{min-height:560px;background-position:58% center}.hero-content{padding:65px 0}.hero p{font-size:16px}.actions .btn{width:100%}section{padding:58px 0}.deal{grid-template-columns:1fr}.deal-art{min-height:170px;order:-1}.deal-copy{padding:26px}.deal-copy h2{font-size:30px}.grid,.features,.currency,.footgrid{grid-template-columns:1fr}.card-top{height:95px}.contact{padding:28px 22px;display:block}.contact-actions{margin-top:20px}.contact-actions .btn{width:100%}.currency{padding:24px}}
+:root{--green:#103c35;--green2:#1c6253;--gold:#d6ad69;--cream:#f7f5ef;--ink:#1c2925;--muted:#718078}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#103c35f2;color:white;backdrop-filter:blur(14px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;letter-spacing:2px;font-size:19px}
+.logo span{display:block;font-size:9px;letter-spacing:3px;color:#dfc18f;margin-top:4px}
+nav{display:flex;align-items:center;gap:25px;font-size:13px}
+nav a:hover{color:#e8c58d}
+.nav-cta,.btn{background:var(--gold);color:#1c2b25;border:0;border-radius:999px;padding:13px 21px;font-weight:800;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+.menu{display:none;background:none;color:white;border:0;font-size:25px}
+.hero{min-height:630px;position:relative;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(5,28,25,.82),rgba(5,28,25,.18)),url("https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=2000&q=85") center/cover}
+.hero-content{padding:100px 0;max-width:720px}
+.eyebrow{color:#e4c38d;text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:800}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:clamp(44px,7vw,78px);line-height:1.04;margin:20px 0}
+.hero p{font-size:17px;line-height:1.8;color:#f0f1eb;max-width:560px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-outline{border:1px solid #ffffff9c;color:white;border-radius:999px;padding:13px 21px;font-weight:700}
+.trustline{display:flex;gap:25px;flex-wrap:wrap;margin-top:55px;color:#f1e8d8;font-size:12px}
+.trustline b{color:white}
+.section{padding:85px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 38px}
+.section-head h2{font-size:clamp(32px,5vw,47px);margin:12px 0}
+.section-head p{color:var(--muted);line-height:1.7}
+.offer{background:var(--green);color:white;border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;overflow:hidden;position:relative}
+.offer:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #ffffff22;border-radius:50%;right:160px;top:-120px}
+.offer h2{font-size:32px;margin:8px 0}
+.offer p{color:#d4e0d8;line-height:1.7;max-width:690px}
+.offer-price{font-family:"Playfair Display";font-size:48px;color:#edc98d;white-space:nowrap}
+.offer small{display:block;font:12px "DM Sans";color:#d4e0d8;text-align:center}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+.search{flex:1;min-width:220px;border:1px solid #e0e3dc;background:white;border-radius:12px;padding:14px 16px;outline:none}
+.search:focus{border-color:var(--green2)}
+.filter{border:1px solid #dfe3dc;background:white;border-radius:999px;padding:11px 16px;color:#53625b;font-size:12px;font-weight:700}
+.filter.active{background:var(--green);color:white;border-color:var(--green)}
+.count{font-size:12px;color:var(--muted);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tour{background:white;border-radius:17px;overflow:hidden;border:1px solid #eceee8;transition:.25s;display:flex;flex-direction:column}
+.tour:hover{transform:translateY(-5px);box-shadow:0 16px 35px #173c2b15}
+.tour-img{height:205px;position:relative;background:#d9e2d9}
+.tour-img img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:13px;top:13px;background:#fffffff0;border-radius:999px;padding:7px 10px;font-size:10px;font-weight:800;color:var(--green)}
+.tour-body{padding:19px;display:flex;flex-direction:column;flex:1}
+.tour h3{font-size:23px;margin:0 0 9px}
+.tour p{font-size:13px;line-height:1.65;color:#68766e;margin:0 0 17px}
+.prices{display:flex;gap:18px;margin-top:auto;padding:14px 0;border-top:1px solid #edf0ea}
+.price strong{display:block;font-size:20px;color:var(--green)}
+.price span{font-size:10px;color:#849087}
+.price.single{margin-right:auto}
+.book{background:var(--green);color:white;border:0;border-radius:9px;padding:12px;font-size:12px;font-weight:800;width:100%;margin-top:4px}
+.book:hover{background:var(--green2)}
+.empty{grid-column:1/-1;text-align:center;padding:45px;color:var(--muted)}
+.why{background:#edf0e8}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{background:white;padding:25px;border-radius:15px}
+.feature .ico{font-size:25px}
+.feature h3{font-size:20px;margin:13px 0 8px}
+.feature p{font-size:12px;color:var(--muted);line-height:1.7}
+.combo-list{color:#f4dfbd;font-size:13px;line-height:1.9}
+.contact{background:var(--green);color:white}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:43px;margin:12px 0}
+.contact p{color:#d1ddd6;line-height:1.8}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.contact-links a{padding:13px 18px;border:1px solid #ffffff55;border-radius:999px;font-weight:700;font-size:13px}
+.contact-links a:first-child{background:var(--gold);color:#1c2b25;border:0}
+.contact-card{background:#ffffff12;border:1px solid #ffffff24;border-radius:18px;padding:28px}
+.contact-card h3{font-size:24px;margin-top:0}
+.contact-card p{font-size:13px}
+footer{background:#092b26;color:#b9c9c0;padding:27px 0;font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;z-index:50;background:#061d19bd;align-items:center;justify-content:center;padding:15px}
+.modal.open{display:flex}
+.modal-box{background:white;border-radius:18px;padding:27px;width:min(460px,100%);position:relative}
+.modal-box h2{margin:0 0 8px;font-size:27px}
+.modal-box p{font-size:13px;color:var(--muted);line-height:1.6}
+.close{position:absolute;right:16px;top:13px;border:0;background:none;font-size:25px}
+.field{width:100%;padding:13px;border:1px solid #dfe4dc;border-radius:9px;margin:7px 0 12px}
+.modal label{font-size:11px;font-weight:800;color:#526159}
+.submit{width:100%;padding:14px;border:0;border-radius:9px;background:var(--green);color:white;font-weight:800;margin-top:8px}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:30;background:#1fae68;color:white;border-radius:999px;padding:14px 19px;font-size:13px;font-weight:800;box-shadow:0 7px 24px #0003}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}nav{gap:13px}.offer{grid-template-columns:1fr}.offer-price{text-align:left}.offer small{text-align:left}}
+@media(max-width:620px){.nav{height:65px}nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--green);padding:20px;flex-direction:column;align-items:flex-start}nav.show{display:flex}.menu{display:block}.nav-cta{display:none}.hero{min-height:620px}.hero-content{padding:75px 0}.hero p{font-size:15px}.trustline{gap:12px;margin-top:35px}.section{padding:60px 0}.grid{grid-template-columns:1fr}.tour-img{height:220px}.features{grid-template-columns:1fr 1fr}.feature{padding:17px}.offer{padding:25px}.offer h2{font-size:27px}.contact-grid{grid-template-columns:1fr;gap:22px}.contact h2{font-size:35px}.float-wa{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><span>Нячанг, Вьетнам · Подбор экскурсий и помощь туристам</span><a href="tel:+84931607346">+84 93 160 73 46</a></div></div>
-<header><nav class="wrap">
-<a class="logo" href="#home">VIETNAM TODAY<small>TRAVEL · NHA TRANG</small></a>
-<div class="links" id="navLinks"><a href="#tours">Экскурсии</a><a href="#services">Услуги</a><a href="#currency">Обмен валюты</a><a href="#contacts">Контакты</a></div>
-<a class="btn nav-cta" href="#tours">Выбрать экскурсию →</a><button class="menu" id="menuToggle" aria-label="Открыть меню">☰</button>
-</nav></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-content">
-<div class="eyebrow">Твой отдых во Вьетнаме начинается здесь</div>
-<h1>Открой для себя<br><span>настоящий Вьетнам</span></h1>
-<p>Подберём экскурсии под ваши интересы, поможем выбрать маршрут и организовать отдых в Нячанге и за его пределами.</p>
-<div class="actions"><a class="btn" href="#tours">Смотреть экскурсии →</a><a class="btn white" href="https://wa.me/84931607346" target="_blank" rel="noopener">Написать в WhatsApp</a></div>
-</div></section>
-<section><div class="wrap"><div class="deal"><div class="deal-copy"><div class="eyebrow">Специальное предложение</div><h2>Комбо из 3 экскурсий</h2><p>Выберите три интересных маршрута и спланируйте несколько ярких дней отдыха во Вьетнаме.</p><div class="deal-price">$95</div><button class="btn white" onclick="openBooking('Комбо из 3 экскурсий — $95')">Хочу комбо →</button></div><div class="deal-art" aria-label="Пейзаж Вьетнама"></div></div></div></section>
-<section class="soft" id="tours"><div class="wrap">
-<div class="heading"><div class="kicker">Каталог путешествий</div><h2>Выбери свою экскурсию</h2><p>В каталоге собраны все предложенные маршруты и цены. Используй поиск или нажми на категорию, чтобы быстро найти подходящий вариант.</p></div>
-<div class="toolbar"><div class="searchbox"><input id="tourSearch" type="search" placeholder="Поиск: Далат, острова, дайвинг..." aria-label="Поиск экскурсий"></div>
-<div class="filters" id="filters">
-<button type="button" class="filter active" data-filter="all">Все экскурсии</button>
-<button type="button" class="filter" data-filter="dalat">Далат и окрестности</button>
-<button type="button" class="filter" data-filter="sea">Море и острова</button>
-<button type="button" class="filter" data-filter="nature">Природа и приключения</button>
-<button type="button" class="filter" data-filter="cities">Города и поездки</button>
-<button type="button" class="filter" data-filter="other">Активности и отдых</button>
-</div></div>
-<div class="catalog-status" id="catalogStatus" aria-live="polite"></div>
-<div class="grid" id="tourGrid"></div><div class="empty" id="emptyState">Ничего не найдено. Попробуйте другое название или категорию.</div>
-</div></section>
-<section id="services"><div class="wrap"><div class="heading"><div class="kicker">Чем поможем</div><h2>Ваш отдых — наша забота</h2></div><div class="features">
-<article class="feature"><div class="ico">🧭</div><h3>Подбор экскурсий</h3><p>Поможем выбрать маршрут по интересам, бюджету, составу компании и продолжительности отдыха.</p></article>
-<article class="feature"><div class="ico">🌴</div><h3>Путешествия по Вьетнаму</h3><p>Морские прогулки, острова, горы, природные локации и поездки в другие города.</p></article>
-<article class="feature"><div class="ico">💱</div><h3>Обмен валюты</h3><p>Поможем сориентироваться по обмену валюты. Актуальный курс уточняйте перед обменом.</p></article>
-</div></div></section>
-<section class="soft" id="currency"><div class="wrap"><div class="currency"><div><div class="kicker">Финансовая помощь туристам</div><h2>Нужен обмен валюты?</h2><p>Напишите, какую валюту и сумму хотите обменять. Подскажем доступные варианты и актуальные условия на момент обращения.</p><a class="btn" href="https://wa.me/84931607346?text=Здравствуйте!%20Хочу%20уточнить%20условия%20обмена%20валюты" target="_blank" rel="noopener">Уточнить условия обмена →</a></div><div class="currency-note"><b>Обмен валюты во Вьетнаме</b><br>Курс меняется. Уточняйте актуальный курс, наличие валюты и итоговую сумму непосредственно перед обменом.</div></div></div></section>
-<section id="contacts"><div class="wrap"><div class="contact"><div><div class="eyebrow">На связи</div><h2>Подберём экскурсию во Вьетнаме</h2><p>Напишите удобным способом — обсудим маршрут, даты и детали поездки.</p></div><div class="contact-actions"><a class="btn white" href="https://wa.me/84931607346" target="_blank" rel="noopener">WhatsApp</a><a class="btn white" href="https://t.me/Vietnam_today2026" target="_blank" rel="noopener">Telegram</a><a class="btn white" href="https://instagram.com/vietnam_today2026" target="_blank" rel="noopener">Instagram</a></div></div></div></section>
-</main>
-<footer><div class="wrap"><div class="footgrid">
-<div><div class="logo" style="color:white">VIETNAM TODAY<small style="color:#a9c4b8">TRAVEL · NHA TRANG</small></div><p>Подбор экскурсий, путешествия по Вьетнаму и помощь с обменом валюты.</p></div>
-<div><div class="foot-title">Навигация</div><div class="foot-links"><a href="#tours">Каталог экскурсий</a><a href="#services">Наши услуги</a><a href="#currency">Обмен валюты</a><a href="#contacts">Контакты</a></div></div>
-<div><div class="foot-title">Связаться</div><div class="foot-links"><a href="tel:+84931607346">+84 93 160 73 46</a><a href="https://wa.me/84931607346">WhatsApp</a><a href="https://t.me/Vietnam_today2026">Telegram</a><a href="https://instagram.com/vietnam_today2026">@vietnam_today2026</a></div></div>
-</div><div class="copyright">© <span id="year"></span> VIETNAM TODAY. Цены указаны в долларах США. Детали и наличие мест уточняйте перед бронированием.</div></div></footer>
-<a class="float" href="https://wa.me/84931607346" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
-<div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box">
-<button class="close" type="button" onclick="closeBooking()" aria-label="Закрыть">×</button><h2 id="modalTitle">Заявка на экскурсию</h2><p>Заполните форму — откроется WhatsApp с готовым сообщением.</p>
-<form id="bookingForm"><div class="field"><label for="chosenTour">Экскурсия</label><input id="chosenTour" readonly></div>
-<div class="field"><label for="clientName">Ваше имя</label><input id="clientName" required placeholder="Как к вам обращаться?"></div>
-<div class="field"><label for="tourDate">Желаемая дата</label><input id="tourDate" type="date"></div>
-<div class="field"><label for="people">Количество человек</label><input id="people" type="number" min="1" value="2"></div>
-<div class="field"><label for="extra">Дополнительная информация</label><textarea id="extra" placeholder="Например: 2 взрослых и 1 ребёнок"></textarea></div>
-<button class="btn" type="submit">Отправить заявку в WhatsApp →</button></form>
-</div></div>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#">VIETNAM TODAY<span>TRAVEL · NHA TRANG</span></a>
+  <nav id="nav">
+   <a href="#tours">Экскурсии</a><a href="#why">Почему мы</a><a href="#combo">Комбо</a><a href="#contacts">Контакты</a>
+  </nav>
+  <a class="nav-cta" href="https://wa.me/84931607346">Подобрать экскурсию</a>
+  <button class="menu" onclick="document.getElementById('nav').classList.toggle('show')" aria-label="Открыть меню">☰</button>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap hero-content">
+  <div class="eyebrow">Ваш отдых во Вьетнаме начинается здесь</div>
+  <h1>Влюбитесь<br>во Вьетнам</h1>
+  <p>Море, горы, острова и удивительные места. Поможем выбрать экскурсии под ваш отдых, подскажем детали и будем на связи до поездки.</p>
+  <div class="hero-actions">
+   <a class="btn" href="#tours">Выбрать экскурсию →</a>
+   <a class="btn-outline" href="https://wa.me/84931607346">Спросить нас</a>
+  </div>
+  <div class="trustline"><span>✦ <b>Подбор маршрута</b></span><span>✦ <b>Помощь туристам</b></span><span>✦ <b>Нячанг и Вьетнам</b></span></div>
+ </div>
+</section>
+
+<section class="section" id="combo">
+ <div class="wrap">
+  <div class="offer">
+   <div>
+    <div class="eyebrow">Специальное предложение</div>
+    <h2>Комбо из 3 экскурсий</h2>
+    <p>Выберите три интересных маршрута и спланируйте несколько ярких дней отдыха во Вьетнаме:</p>
+    <div class="combo-list">• Смотровая экскурсия по Нячангу<br>• Водопады Бахо + Зоклет<br>• Янгбей<br>• Далат New</div>
+    <p>Выберите любые три маршрута из предложения — подробности и доступность уточняйте у менеджера.</p>
+    <a class="btn" href="https://wa.me/84931607346?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20про%20комбо%20из%203%20экскурсий%20за%2095%24.">Хочу комбо →</a>
+   </div>
+   <div><div class="offer-price">$95</div><small>за комбо из 3 экскурсий</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="tours">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="eyebrow">Откройте новые места</div>
+   <h2>Выберите своё путешествие</h2>
+   <p>От островных приключений и водопадов до горных городов и ярких впечатлений. Найдите маршрут по душе — мы поможем с организацией.</p>
+  </div>
+  <div class="controls">
+   <input id="search" class="search" placeholder="Найти экскурсию: Далат, острова, море..." oninput="render()">
+   <button class="filter active" data-cat="Все" onclick="setCat(this)">Все</button>
+   <button class="filter" data-cat="Далат" onclick="setCat(this)">Далат</button>
+   <button class="filter" data-cat="Море" onclick="setCat(this)">Море и острова</button>
+   <button class="filter" data-cat="Природа" onclick="setCat(this)">Природа</button>
+   <button class="filter" data-cat="Города" onclick="setCat(this)">Города</button>
+   <button class="filter" data-cat="Активности" onclick="setCat(this)">Активности</button>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+ </div>
+</section>
+
+<section class="section why" id="why">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="eyebrow">VIETNAM TODAY</div>
+   <h2>Отдых, о котором приятно вспоминать</h2>
+   <p>Мы помогаем не потеряться среди десятков предложений и выбрать то, что действительно подходит именно вашему путешествию.</p>
+  </div>
+  <div class="features">
+   <div class="feature"><div class="ico">🧭</div><h3>Поможем выбрать</h3><p>Учитываем ваши интересы, бюджет и состав компании. Подскажем, с чего начать знакомство с Вьетнамом.</p></div>
+   <div class="feature"><div class="ico">🌴</div><h3>Разные впечатления</h3><p>Морские прогулки, острова, горы, водопады, города и активный отдых.</p></div>
+   <div class="feature"><div class="ico">🤝</div><h3>Всегда на связи</h3><p>Можно задать вопросы до бронирования и уточнить детали поездки в удобном мессенджере.</p></div>
+   <div class="feature"><div class="ico">💱</div><h3>Помощь с валютой</h3><p>Поможем уточнить доступные варианты обмена. Курс и условия подтверждаются перед обменом.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contacts">
+ <div class="wrap contact-grid">
+  <div>
+   <div class="eyebrow">Давайте спланируем ваш отдых</div>
+   <h2>Ваш Вьетнам<br>начинается с сообщения</h2>
+   <p>Расскажите, сколько дней вы отдыхаете и что вам интересно. Поможем сориентироваться по экскурсиям и ответим на вопросы.</p>
+   <div class="contact-links">
+    <a href="https://wa.me/84931607346">Написать в WhatsApp</a>
+    <a href="https://t.me/Vietnam_today2026">Telegram</a>
+    <a href="https://www.instagram.com/vietnam_today2026/">Instagram</a>
+   </div>
+  </div>
+  <div class="contact-card">
+   <h3>VIETNAM TODAY</h3>
+   <p>Экскурсии и помощь туристам во Вьетнаме</p>
+   <p>Телефон / WhatsApp<br><strong>+84 93 160 73 46</strong></p>
+   <p>Telegram<br><strong>@Vietnam_today2026</strong></p>
+   <p>Instagram<br><strong>@vietnam_today2026</strong></p>
+   <a class="btn" href="https://wa.me/84931607346">Обсудить поездку →</a>
+  </div>
+ </div>
+</section>
+
+<footer><div class="wrap footer-inner"><span>© 2026 VIETNAM TODAY · NHA TRANG</span><span>Цены указаны в USD. Актуальность, детали и наличие мест уточняйте перед бронированием.</span></div></footer>
+<a class="float-wa" href="https://wa.me/84931607346">WhatsApp ↗</a>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal()" aria-label="Закрыть">×</button>
+  <div class="eyebrow">Заявка на экскурсию</div>
+  <h2 id="modalTitle">Забронировать</h2>
+  <p>Оставьте пару деталей — откроется WhatsApp с готовым сообщением для менеджера.</p>
+  <form onsubmit="sendBooking(event)">
+   <label>Ваше имя</label><input class="field" id="name" placeholder="Как к вам обращаться?" required>
+   <label>Желаемая дата</label><input class="field" id="date" type="date">
+   <label>Количество человек</label><input class="field" id="people" type="number" min="1" value="2">
+   <label>Пожелания или вопросы</label><input class="field" id="note" placeholder="Например, едем с ребёнком">
+   <button class="submit" type="submit">Продолжить в WhatsApp →</button>
+  </form>
+ </div>
+</div>
+
 <script>
-"use strict";
+const photo = {
+ dalat:"https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80",
+ sea:"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
+ island:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+ waterfall:"https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=900&q=80",
+ city:"https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80",
+ jungle:"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80",
+ boat:"https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80",
+ adventure:"https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+};
 const tours = [
-{name:"Далат (эксклюзивный тур с прогулками по Далату)",desc:"Эксклюзивный маршрут с прогулками по атмосферному городу Далат.",cat:"dalat",adult:35,child:30,icon:"🏞️"},
-{name:"Супер Далат",desc:"Насыщенное путешествие по интересным местам Далата.",cat:"dalat",adult:45,child:35,icon:"🌿"},
-{name:"Далат The Best",desc:"Популярные локации и впечатления в одном маршруте.",cat:"dalat",adult:49,child:39,icon:"🌸"},
-{name:"Далат All in",desc:"Самые красивые места за один день.",cat:"dalat",adult:58,child:45,icon:"⛰️"},
-{name:"Далат 2 дня",desc:"Полное погружение в атмосферу горного города.",cat:"dalat",adult:99,child:75,icon:"🏡"},
-{name:"Фанранг",desc:"Путешествие для всей семьи — знакомство с капибарами.",cat:"nature",adult:45,child:35,icon:"🦙"},
-{name:"Фуйен",desc:"Живописное место, где стоит побывать каждому.",cat:"nature",adult:40,child:30,icon:"🌊"},
-{name:"Северные острова — остров орхидей + остров обезьян",desc:"Два острова, природа и знакомство с местной фауной.",cat:"sea",adult:35,child:25,icon:"🐒"},
-{name:"Морское приключение — 2 острова + снорклинг",desc:"Морская прогулка с посещением двух островов и снорклингом.",cat:"sea",adult:40,child:30,icon:"🤿"},
-{name:"Янгбей",desc:"Крокодилы, природа и горячие источники.",cat:"nature",adult:32,child:24,icon:"🐊"},
-{name:"Бахо + пляж Зоклет",desc:"Водопады Бахо и отдых на пляже Зоклет.",cat:"nature",adult:35,child:25,icon:"🏝️"},
-{name:"Затерянный рай — эксклюзив",desc:"Эксклюзивная поездка для любителей красивых мест.",cat:"sea",adult:45,child:32,icon:"🌴"},
-{name:"Райский остров",desc:"Отдых на острове; алкоголь без ограничений по описанию предложения.",cat:"sea",adult:75,child:55,icon:"🍹"},
-{name:"Дананг 1 день — Золотой мост «Руки бога»",desc:"Однодневное путешествие к знаменитому Золотому мосту.",cat:"cities",adult:150,child:110,icon:"🌉"},
-{name:"Дананг + Хойан 2 дня",desc:"Двухдневная поездка в Дананг и старинный Хойан.",cat:"cities",adult:210,child:160,icon:"🏮"},
-{name:"Сайгон 2 дня",desc:"Двухдневное знакомство с городом Хошимин (Сайгон).",cat:"cities",adult:200,child:150,icon:"🏙️"},
-{name:"Дак Лак",desc:"Путешествие в регион гор, озёр и кофейных плантаций.",cat:"cities",adult:145,child:110,icon:"☕"},
-{name:"Дайвинг — 2 погружения",desc:"Два погружения для знакомства с подводным миром.",cat:"sea",adult:95,child:null,icon:"🐠"},
-{name:"Снорклинг",desc:"Морская прогулка и наблюдение за подводным миром.",cat:"sea",adult:45,child:null,icon:"🐟"},
-{name:"Обзорная экскурсия по Нячангу",desc:"Знакомство с главными достопримечательностями Нячанга.",cat:"cities",adult:30,child:23,icon:"🏛️"},
-{name:"Квадроциклы в джунглях",desc:"Активная поездка по природным маршрутам на квадроциклах.",cat:"other",adult:55,child:null,icon:"🏍️"},
-{name:"Зиплайн в джунглях",desc:"Полёт над зелёными джунглями и яркие эмоции.",cat:"other",adult:55,child:null,icon:"🌳"},
-{name:"Квадроциклы + зиплайн комбо",desc:"Комбо для любителей активного отдыха.",cat:"other",adult:80,child:null,icon:"⚡"},
-{name:"Катамаран",desc:"Морская прогулка на катамаране.",cat:"sea",adult:75,child:55,icon:"⛵"},
-{name:"Вечерний круиз 5★",desc:"Вечерняя прогулка по морю на круизном судне.",cat:"sea",adult:90,child:70,icon:"🌅"},
-{name:"Jeep Safari",desc:"Приключенческая поездка на джипах.",cat:"other",adult:95,child:55,icon:"🚙"},
-{name:"IRESORT",desc:"Отдых и расслабление в термальном комплексе.",cat:"other",adult:40,child:30,icon:"♨️"},
-{name:"Рыбалка на озере",desc:"Спокойная рыбалка в окружении природы.",cat:"other",adult:40,child:30,icon:"🎣"},
-{name:"Морская рыбалка",desc:"Выход в море и рыбалка на открытой воде.",cat:"sea",adult:70,child:50,icon:"🛥️"},
-{name:"Ночная ловля кальмаров",desc:"Вечерний выход в море с ловлей кальмаров.",cat:"sea",adult:70,child:50,icon:"🦑"},
-{name:"Муйне 2 дня",desc:"Двухдневное путешествие на солнечный курорт Муйне.",cat:"cities",adult:110,child:80,icon:"🏜️"},
-{name:"Coral Trip — южные острова",desc:"Морская поездка по красивым южным островам.",cat:"sea",adult:45,child:35,icon:"🪸"},
-{name:"Vinpearl",desc:"День развлечений на острове Vinpearl.",cat:"other",adult:45,child:35,icon:"🎡"}
+["Далат (эксклюзивная прогулка)","Далат","Городская прогулка и знакомство с атмосферой горного Далата. Хороший вариант для тех, кто хочет увидеть другой, прохладный и неспешный Вьетнам.",35,30,"dalat"],
+["Супер Далат","Далат","Путешествие в знаменитый горный город. Выбирайте этот маршрут, если хочется сменить морские пейзажи на горы и колоритные виды.",45,35,"dalat"],
+["Далат The Best","Далат","Маршрут для знакомства с Далатом и его яркими впечатлениями. Подойдёт тем, кто хочет посвятить день этому необычному городу.",49,39,"dalat"],
+["Далат all in","Далат","Лучшие места Далата в одной поездке. Вариант для путешественников, которые хотят насыщенного знакомства с городом за один день.",58,45,"dalat"],
+["Далат 2 дня","Далат","Два дня для знакомства с горным Вьетнамом без спешки одного дня. Возможность глубже прочувствовать атмосферу Далата.",99,75,"dalat"],
+["Фанранг — семейная поездка","Природа","Семейное путешествие в Фанранг с возможностью увидеть капибар. Необычный вариант для отдыха с детьми и ярких фотографий.",45,35,"adventure"],
+["Фуйен","Природа","Поездка в провинцию Фуйен — для тех, кто хочет увидеть новые пейзажи и открыть для себя ещё одну сторону Вьетнама.",40,30,"sea"],
+["Северные острова: Орхидея + Обезьяний остров","Море","Морское направление с посещением острова Орхидей и Обезьяньего острова. Отличный выбор для дня среди островных пейзажей.",35,25,"island"],
+["Sea Adventure — 2 острова","Море","Морское приключение с посещением двух островов и снорклингом. Для тех, кто хочет провести день на воде и познакомиться с подводным миром.",40,30,"sea"],
+["Янгбей","Природа","Поездка в природный парк Янгбей: водопады, природа, крокодилы и горячие источники. Сочетание впечатлений для любителей природы.",32,24,"waterfall"],
+["Бахо + пляж Зоклет","Природа","Два разных настроения в одной поездке: природные водопады Бахо и отдых на пляже Зоклет. Хороший вариант для насыщенного дня.",35,25,"waterfall"],
+["Lost Paradise — эксклюзив","Море","Эксклюзивный вариант отдыха у моря для тех, кто ищет необычные впечатления и красивые пейзажи.",45,32,"island"],
+["Paradise Island","Море","Отдых на острове с безлимитными алкогольными напитками по описанию предложения. Уточняйте условия и доступность перед бронированием.",75,55,"island"],
+["Дананг: Золотой мост","Города","Однодневное путешествие в Дананг к знаменитому Золотому мосту — тому самому мосту, который словно держат гигантские каменные руки.",150,110,"city"],
+["Дананг + Хойан — 2 дня","Города","Два дня для знакомства с Данангом и атмосферным Хойаном. Возможность совместить знаменитые места центрального Вьетнама.",210,160,"city"],
+["Сайгон — 2 дня","Города","Двухдневная поездка в крупнейший город страны. Подойдёт тем, кто хочет увидеть динамичный городской Вьетнам.",200,150,"city"],
+["Даклак","Природа","Путешествие в регион Даклак — возможность открыть для себя другой Вьетнам, его природу и атмосферу Центрального нагорья.",145,110,"jungle"],
+["Дайвинг — 2 погружения","Море","Два погружения для знакомства с подводным миром. Подробности по условиям участия и требованиям уточняйте при бронировании.",95,null,"sea"],
+["Снорклинг","Море","Знакомство с подводным миром у побережья. Хороший выбор для тех, кто хочет провести время на море и посмотреть на жизнь под водой.",45,null,"sea"],
+["Обзорная экскурсия по Нячангу","Города","Знакомство с Нячангом и его главными впечатлениями. Отличный способ лучше узнать город, в котором проходит ваш отдых.",30,23,"city"],
+["Квадроциклы в джунглях","Активности","Активное приключение на квадроциклах среди природных пейзажей. Для тех, кому хочется добавить в отпуск драйва.",55,null,"adventure"],
+["Зиплайн в джунглях","Активности","Полёт по тросам среди зелени и природных пейзажей. Возможность взглянуть на джунгли с необычного ракурса.",55,null,"jungle"],
+["Квадроциклы + зиплайн","Активности","Два активных впечатления в одном предложении: поездка на квадроциклах и зиплайн. Для любителей насыщенного отдыха.",80,null,"adventure"],
+["Катамаран","Море","Морская прогулка на катамаране — возможность насладиться морем, солнцем и красивыми видами побережья.",75,55,"boat"],
+["Вечерний круиз 5★","Море","Вечерний круиз формата 5 звёзд. Атмосфера моря и особенный вечер во время отдыха в Нячанге.",90,70,"boat"],
+["Jeep Safari","Активности","Сафари на джипе для тех, кто хочет добавить в поездку приключений и увидеть окрестности в необычном формате.",95,55,"adventure"],
+["I-Resort","Активности","Отдых в I-Resort — вариант расслабиться и сменить экскурсионный ритм на спокойный отдых.",40,30,"waterfall"],
+["Рыбалка на озере","Активности","Выезд на озеро для любителей рыбалки и спокойного отдыха на природе.",40,30,"jungle"],
+["Морская рыбалка","Море","Выход в море на рыбалку. Подойдёт тем, кто хочет попробовать себя в новом формате морского отдыха.",70,50,"boat"],
+["Ночная ловля кальмаров","Море","Вечерняя морская рыбалка с ловлей кальмаров. Необычный способ провести время на воде после заката.",70,50,"boat"],
+["Муйне — 2 дня","Города","Двухдневная поездка в Муйне с размещением в Sunny Resort и программой «Джия тур» по вашему прайсу. Детали уточняйте перед поездкой.",110,80,"sea"],
+["Coral Trip — южные острова","Море","Морская поездка к южным островам. Для тех, кто хочет провести день среди морских пейзажей и островной атмосферы.",45,35,"island"],
+["Vinpearl","Активности","Поездка в Vinpearl — вариант для яркого дня развлечений и отдыха. Уточняйте актуальный формат посещения и включённые опции.",45,35,"adventure"]
 ];
-const categoryLabels={dalat:"Далат и окрестности",sea:"Море и острова",nature:"Природа и приключения",cities:"Города и поездки",other:"Активности и отдых"};
-const grid=document.getElementById("tourGrid"),search=document.getElementById("tourSearch"),filters=document.getElementById("filters");
-let activeFilter="all";
-function escapeHTML(value){return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
-function renderTours(){
- const query=search.value.trim().toLocaleLowerCase("ru");
- const shown=tours.filter(t=>(activeFilter==="all"||t.cat===activeFilter)&&(t.name+" "+t.desc).toLocaleLowerCase("ru").includes(query));
- grid.innerHTML=shown.map(t=>`<article class="card"><div class="card-top" aria-hidden="true">${t.icon}</div><div class="card-body"><div class="tag">${categoryLabels[t.cat]}</div><h3>${escapeHTML(t.name)}</h3><p>${escapeHTML(t.desc)}</p><div class="prices"><div class="price">Взрослый<b>$${t.adult}</b></div>${t.child===null?"":`<div class="price">Детский<b>$${t.child}</b></div>`}</div><button type="button" class="btn small" data-book="${escapeHTML(t.name)}">Выбрать экскурсию</button></div></article>`).join("");
- document.getElementById("catalogStatus").textContent=`Показано экскурсий: ${shown.length} из ${tours.length}`;
- document.getElementById("emptyState").style.display=shown.length?"none":"block";
+let category="Все",selected="";
+const grid=document.getElementById("grid");
+function money(n){return n==null?"—":"$"+n}
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const filtered=tours.filter(t=>(category==="Все"||t[1]===category)&&(!q||(t[0]+" "+t[1]+" "+t[2]).toLowerCase().includes(q)));
+ document.getElementById("count").textContent="Найдено экскурсий: "+filtered.length;
+ grid.innerHTML=filtered.length?filtered.map(t=>`
+ <article class="tour">
+  <div class="tour-img"><img loading="lazy" src="${photo[t[5]]}" alt="${t[0]}" onerror="this.style.display='none'"><span class="tag">${t[1]}</span></div>
+  <div class="tour-body">
+   <h3>${t[0]}</h3><p>${t[2]}</p>
+   <div class="prices">
+    <div class="price"><strong>${money(t[3])}</strong><span>Взрослый</span></div>
+    ${t[4]!=null?`<div class="price"><strong>${money(t[4])}</strong><span>Ребёнок</span></div>`:""}
+   </div>
+   <button class="book" onclick="openModal('${t[0].replace(/'/g,"\\'")}')">Узнать детали и забронировать →</button>
+  </div>
+ </article>`).join(""):'<div class="empty">По вашему запросу ничего не найдено. Попробуйте другое название или категорию.</div>';
 }
-filters.addEventListener("click",e=>{const button=e.target.closest("button[data-filter]");if(!button)return;activeFilter=button.dataset.filter;filters.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===button));renderTours();});
-search.addEventListener("input",renderTours);
-grid.addEventListener("click",e=>{const button=e.target.closest("button[data-book]");if(button)openBooking(button.dataset.book);});
-function openBooking(tour){document.getElementById("chosenTour").value=tour;document.getElementById("bookingModal").classList.add("open");document.body.style.overflow="hidden";}
-function closeBooking(){document.getElementById("bookingModal").classList.remove("open");document.body.style.overflow="";}
-document.getElementById("bookingModal").addEventListener("click",e=>{if(e.target.id==="bookingModal")closeBooking();});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBooking();});
-document.getElementById("bookingForm").addEventListener("submit",e=>{
+function setCat(btn){
+ category=btn.dataset.cat;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));
+ render();
+}
+function openModal(title){
+ selected=title;
+ document.getElementById("modalTitle").textContent=title;
+ document.getElementById("modal").classList.add("open");
+}
+function closeModal(){document.getElementById("modal").classList.remove("open")}
+function sendBooking(e){
  e.preventDefault();
- const name=document.getElementById("clientName").value.trim();
- const tour=document.getElementById("chosenTour").value;
- const date=document.getElementById("tourDate").value||"не указана";
- const people=document.getElementById("people").value||"не указано";
- const extra=document.getElementById("extra").value.trim()||"нет";
- const message=`Здравствуйте! Хочу узнать о бронировании экскурсии.\nЭкскурсия: ${tour}\nИмя: ${name}\nДата: ${date}\nКоличество человек: ${people}\nДополнительно: ${extra}`;
- window.open("https://wa.me/84931607346?text="+encodeURIComponent(message),"_blank","noopener");
- closeBooking();
-});
-document.getElementById("menuToggle").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));
-document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
-document.getElementById("year").textContent=new Date().getFullYear();
-renderTours();
+ const msg=`Здравствуйте! Хочу узнать подробнее и забронировать экскурсию: ${selected}. Имя: ${document.getElementById("name").value}. Дата: ${document.getElementById("date").value||"пока не определена"}. Количество человек: ${document.getElementById("people").value}. Пожелания: ${document.getElementById("note").value||"нет"}. Подскажите, пожалуйста, детали.`;
+ window.open("https://wa.me/84931607346?text="+encodeURIComponent(msg),"_blank");
+}
+render();
 </script>
 </body>
 </html>
